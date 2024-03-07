@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  UserID: MyString
+  DeskID: MyString
+  BookingTime: MyString
+
+two:
+  UserID: MyString
+  DeskID: MyString
+  BookingTime: MyString

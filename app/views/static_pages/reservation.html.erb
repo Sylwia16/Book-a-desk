@@ -1,0 +1,114 @@
+<h2>Mapa biura</h2>
+
+ <%= image_tag "3.png", width: 600, class: 'd-block mx-auto' %>
+
+ <p>Aktualnie dostępne biurka:</p>
+
+
+ <div class="btn-toolbar mb-2" role="toolbar" aria-label="Toolbar with button groups">
+  <% Desk.all.each do |desk| %>
+    <div class="btn-group me-5" role="group" aria-label="Basic radio button group">
+      <% if desk.availability %>
+        <input type="radio" class="btn-check" id="btncheck<%= desk.DeskID %>" data-toggle-id="btncheck<%= desk.DeskID %>">
+        <label class="btn btn-success" for="btncheck<%= desk.DeskID %>"><%= desk.DeskID %></label>
+      <% else %>
+        <input type="radio" class="btn-check" id="btncheck<%= desk.DeskID %>" data-toggle-id="btncheck<%= desk.DeskID %>" >
+        <label class="btn btn-danger" for="btncheck<%= desk.DeskID %>"><%= desk.DeskID %></label>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<div class="btn btn-success">
+  <%= link_to 'Zarezerwuj biurko', bookings_path, :class => "btn btn-success"%>
+</div>
+
+<!---!>
+<div class="btn-toolbar mb-2" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group me-5" role="group" aria-label="Basic radio button group">
+    <input type="radio" class="btn-check"  id="btncheck1" autocomplete="off" data-toggle-id="btncheck1">
+    <label class="btn btn-success" for="btncheck1"> 1</label>
+
+    <input type="radio" class="btn-check"  id="btncheck2" data-toggle-id="btncheck2">
+    <label class="btn btn-success" for="btncheck2"> 2</label>
+  </div>
+
+<div class="btn-group me-5" role="group" aria-label="Basic radio button group">
+    <input type="radio" class="btn-check"  id="btncheck5" data-toggle-id="btncheck5">
+    <label class="btn btn-success" for="btncheck5"> 5</label>
+
+    <input type="radio" class="btn-check"  id="btncheck6" data-toggle-id="btncheck6">
+    <label class="btn btn-success" for="btncheck6"> 6</label>
+</div>
+
+<div class="btn-group me-5" role="group" aria-label="Basic radio button group">
+    <input type="radio" class="btn-check"  id="btncheck9" data-toggle-id="btncheck9">
+    <label class="btn btn-success" for="btncheck9"> 9</label>
+
+    <input type="radio" class="btn-check"  id="btncheck10" data-toggle-id="btncheck10">
+    <label class="btn btn-success" for="btncheck10"> 10</label>
+</div>
+ 
+<div class="btn-group me-5" role="group" aria-label="Basic radio button group">
+    <input type="radio" class="btn-check"  id="btncheck13" data-toggle-id="btncheck13">
+    <label class="btn btn-success" for="btncheck13"> 13</label>
+
+    <input type="radio" class="btn-check"  id="btncheck14" data-toggle-id="btncheck14">
+    <label class="btn btn-success" for="btncheck14"> 14</label>
+</div>
+
+
+<div class="btn-group " role="group" aria-label="Basic radio button group">
+    <input type="radio" class="btn-check"  id="btncheck17" data-toggle-id="btncheck17">
+    <label class="btn btn-success" for="btncheck17"> 17</label>
+
+    <input type="radio" class="btn-check"  id="btncheck18" data-toggle-id="btncheck18">
+    <label class="btn btn-success" for="btncheck18"> 18</label>
+</div>
+</div>
+
+
+<div class="btn-toolbar mb-2" role="toolbar" aria-label="Basic radio button group">
+<div class="btn-group me-5" role="group" aria-label="Basic checkbox toggle button group">
+    <input type="radio" class="btn-check"  id="btncheck3" data-toggle-id="btncheck3">
+    <label class="btn btn-success" for="btncheck3"> 3</label>
+
+    <input type="radio" class="btn-check"  id="btncheck4" data-toggle-id="btncheck4">
+    <label class="btn btn-success" for="btncheck4"> 4</label>
+</div>
+
+<div class="btn-group me-5" role="group" aria-label="Basic radio button group">
+    <input type="radio" class="btn-check"  id="btncheck7" data-toggle-id="btncheck7">
+    <label class="btn btn-success" for="btncheck7"> 7</label>
+
+    <input type="radio" class="btn-check"  id="btncheck8" data-toggle-id="btncheck8">
+    <label class="btn btn-success" for="btncheck8"> 8</label>
+</div>
+
+<div class="btn-group me-5" role="group" aria-label="Basic radio button group">
+    <input type="radio" class="btn-check"  id="btncheck11" data-toggle-id="btncheck11">
+    <label class="btn btn-success" for="btncheck11"> 11</label>
+
+    <input type="radio" class="btn-check"  id="btncheck12" data-toggle-id="btncheck12">
+    <label class="btn btn-success" for="btncheck12"> 12</label>
+</div>
+ 
+<div class="btn-group me-5" role="group" aria-label="Basic radio button group">
+  <input type="radio" class="btn-check"  id="btncheck15" data-toggle-id="btncheck15">
+    <label class="btn btn-success" for="btncheck15"> 15</label>
+
+    <input type="radio" class="btn-check"  id="btncheck16" data-toggle-id="btncheck16">
+    <label class="btn btn-success" for="btncheck16"> 16</label>
+</div>
+
+
+<div class="btn-group " role="group" aria-label="Basic radio button group">
+    <input type="radio" class="btn-check"  id="btncheck19" data-toggle-id="btncheck19">
+    <label class="btn btn-success" for="btncheck19"> 19</label>
+
+    <input type="radio" class="btn-check"  id="btncheck20" data-toggle-id="btncheck20">
+    <label class="btn btn-success" for="btncheck20"> 20</label>
+</div>
+</div>
+
+

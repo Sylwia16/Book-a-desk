@@ -1,0 +1,56 @@
+/* app/assets/stylesheets/application.css */
+.worker-details {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.edit-link, .show-link, .delete-button {
+  color: white;
+  background-color: #3498db;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.edit-link:hover, .show-link:hover, .delete-button:hover {
+  background-color: #2980b9;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-submit {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  background-color: #2980b9;
+}
+
+.error-message {
+  color: red;
+}

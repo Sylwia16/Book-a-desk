@@ -1,0 +1,24 @@
+<head>
+  <!-- Inne tagi head... -->
+  <%= stylesheet_link_tag 'bookings' %>
+</head>
+
+
+<!-- app/views/bookings/index.html.erb -->
+<p class="success-message"><%= notice %></p>
+
+<h1>Rezerwacje</h1>
+
+<div id="bookings" class="bookings-list">
+  <% @bookings.each do |booking| %>
+    <div class="booking-item">
+      <%= render booking %>
+      <p>
+        <%= link_to "Pokaż szczegóły", booking, class: "show-link" %>
+
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Nowa rezerwacja", new_booking_path, class: "new-booking-link" %>

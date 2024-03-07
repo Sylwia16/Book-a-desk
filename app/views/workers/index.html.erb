@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Pracownicy</h1>
+
+<div id="workers">
+  <% @workers.each do |worker| %>
+    <%= render worker %>
+    
+  <% end %>
+</div>
+
+<%= link_to "Nowy pracownik", new_worker_path %>

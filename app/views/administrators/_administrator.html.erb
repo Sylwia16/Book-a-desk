@@ -1,0 +1,17 @@
+<div id="<%= dom_id administrator %>">
+  <p>
+    <strong>AdminID:</strong>
+    <%= administrator.AdminID %>
+  </p>
+
+  <p>
+    <strong>Password:</strong>
+    <%= administrator.Password %>
+  </p>
+
+</div>
+<div class="actions">
+  <%= link_to "Edytuj szczegóły", edit_administrator_path(administrator), class: "edit-link" %> 
+  <%= link_to "Pokaż szczegóły", administrator, class: "show-link" %> 
+  
+</div>

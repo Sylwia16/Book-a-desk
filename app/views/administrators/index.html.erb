@@ -1,0 +1,25 @@
+<head>
+  <!-- Inne tagi head... -->
+  <%= stylesheet_link_tag 'administrators' %>
+</head>
+
+<p class="success-message"><%= notice %></p>
+
+
+
+
+
+<h1>Administratorzy</h1>
+
+<div id="administrators" class="administrators-list">
+  <% @administrators.each do |administrator| %>
+    <div class="administrator-item">
+      <%= render administrator %>
+    
+    </div>
+  <% end %>
+</div>
+
+
+<%= link_to "Nowy administrator", new_administrator_path, class: "new-administrator-link" %>
+

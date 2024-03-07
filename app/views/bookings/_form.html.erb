@@ -1,0 +1,53 @@
+<%= form_with(model: booking) do |form| %>
+  <% if booking.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+        <% booking.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div>
+ <%= form.label :worker_id, style: "display: block" %>
+    <% if current_user.email == '4999@admin.com' %>
+      <%= form.select :worker_id, Worker.all.map { |w| [w.WorkerID, w.id] }, { prompt: "Wybierz ID pracownika" } %>
+    <% else %>
+    <% if current_user.email == '5002@work.com' ||  current_user.email == '5003@work.com' %>
+    <%= form.select :worker_id, [[current_user.id-1& current_user.id-1]], { prompt: "Twoje ID pracownika", disabled: true } %>
+      <% else %>
+    <% if current_user.email == '5015@work.com' || current_user.email == '5016@work.com' || current_user.email == '5017@work.com' ||  current_user.email == '5018@work.com' ||  current_user.email == '5019@work.com' ||  current_user.email == '5020@work.com'%>
+    <%= form.select :worker_id, [[current_user.id+1& current_user.id+1]], { prompt: "Twoje ID pracownika", disabled: true } %>
+     <% else %>
+    <% if current_user.email == '5004@work.com' %>
+    <%= form.select :worker_id, [[current_user.id-17& current_user.id-17]], { prompt: "Twoje ID pracownika", disabled: true } %>
+    <% else %>
+    <%= form.select :worker_id, [[current_user.id& current_user.id]], { prompt: "Twoje ID pracownika", disabled: true } %>
+    
+
+    <%end %>
+    <%end %>
+    <%end %>
+    <% end %>
+</div>
+
+
+<div>
+  <%= form.label :desk_id, style: "display: block" %>
+  <%= form.select :desk_id, options_for_select([[ "Wybierz biurko", nil ]] + Desk.all.map { |d| [d.DeskID, d.id] }), { prompt: "Wybierz biurko" } %>
+</div>
+
+
+  <div>
+    <%= form.label :BookingTime, style: "display: block" %>
+    <%= form.text_field :BookingTime %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+

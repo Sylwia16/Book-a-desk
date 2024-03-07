@@ -1,0 +1,24 @@
+<!-- app/views/administrators/show.html.erb -->
+<p style="color: green"><%= notice %></p>
+
+<div class="administrator-details">
+  <p>
+    <strong>AdminID:</strong>
+    <%= @administrator.AdminID %>
+  </p>
+
+  <p>
+    <strong>Password:</strong>
+    <%= @administrator.Password %>
+  </p>
+
+  <!-- Dodaj inne szczegóły administratora, jeśli są dostępne -->
+</div>
+
+<div class="actions">
+  <%= link_to "Edytuj szczegóły", edit_administrator_path(@administrator), class: "edit-button" %> |
+  
+
+  <%= button_to "Usuń tego administratora", @administrator, method: :delete, class: "delete-button" %>
+  <%= link_to "Powrót do administratorów", administrators_path, class: "back-button" %>
+</div>

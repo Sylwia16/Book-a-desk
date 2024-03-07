@@ -1,0 +1,55 @@
+/* app/assets/stylesheets/application.css */
+
+/* Stylizacja dla administratorów */
+.administrator-details {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.edit-button, .show-link, .delete-button, .back-button {
+  color: white;
+  background-color: #3498db;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.edit-button:hover, .show-link:hover, .delete-button:hover, .back-button:hover {
+  background-color: #2980b9;
+}
+
+/* Stylizacja dla biurek */
+.desk-details {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.desk-actions {
+  margin-top: 10px;
+}
+
+.edit-desk-button, .show-desk-link, .delete-desk-button, .back-desk-button {
+  color: white;
+  background-color: #3498db;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.edit-desk-button:hover, .show-desk-link:hover, .delete-desk-button:hover, .back-desk-button:hover {
+  background-color: #2980b9;
+}

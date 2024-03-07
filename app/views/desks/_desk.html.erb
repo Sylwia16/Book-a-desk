@@ -1,0 +1,23 @@
+<!-- app/views/desks/_desk.html.erb -->
+<div id="<%= dom_id desk %>" class="desk-details">
+  <p>
+    <strong>Desk ID:</strong>
+    <%= desk.DeskID %>
+  </p>
+
+  <p>
+    <strong>Dostępność:</strong>
+    <%= desk.availability %>
+  </p>
+
+  <p>
+    <strong>Opis:</strong>
+    <%= desk.Description %>
+  </p>
+</div>
+
+<div class="actions">
+  <%= link_to "Edytuj szczegóły", edit_desk_path(desk), class: "edit-link" %> |
+  <%= link_to "Pokaż szczegóły", desk, class: "show-link" %> |
+  <%= button_to "Usuń to biurko", desk, method: :delete, class: "delete-button" %>
+</div>

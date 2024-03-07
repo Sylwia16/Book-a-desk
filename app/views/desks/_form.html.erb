@@ -1,0 +1,33 @@
+<!-- app/views/desks/_form.html.erb -->
+<%= form_with(model: desk) do |form| %>
+  <% if desk.errors.any? %>
+    <div class="error-message">
+      <h2><%= pluralize(desk.errors.count, "error") %> prohibited this desk from being saved:</h2>
+
+      <ul>
+        <% desk.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :DeskID, class: "form-label" %>
+    <%= form.text_field :DeskID, class: "form-input" %>
+  </div>
+
+  <div>
+    <%= form.label :availability, class: "form-label" %>
+    <%= form.text_field :availability, class: "form-input" %>
+  </div>
+
+  <div>
+    <%= form.label :Description, class: "form-label" %>
+    <%= form.text_field :Description, class: "form-input" %>
+  </div>
+
+  <div>
+    <%= form.submit class: "form-submit" %>
+  </div>
+<% end %>

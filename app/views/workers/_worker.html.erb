@@ -1,0 +1,30 @@
+<!-- app/views/workers/_worker.html.erb -->
+<div id="<%= dom_id worker %>" class="worker-details">
+  <p>
+    <strong>Worker ID:</strong>
+    <%= worker.WorkerID %>
+  </p>
+
+  <p>
+    <strong>Password:</strong>
+    <%= worker.Password %>
+  </p>
+
+  <!-- Dodaj inne szczegóły pracownika, jeśli są dostępne -->
+</div>
+
+<% if params[:action] == 'index' %>
+  <div class="actions">
+    <%= link_to "Edytuj szczegóły", edit_worker_path(worker), class: "edit-link" %> |
+    <%= link_to "Pokaż szczegóły", worker, class: "show-link" %> |
+    <%= button_to "Usuń tego pracownika", worker, method: :delete, class: "delete-button" %>
+  </div>
+<% elsif params[:action] == 'show' %>
+  <div>
+    <%= link_to "Edytuj szczegóły", edit_worker_path(worker), class: "edit-link" %> 
+   
+    <%= button_to "Usuń tego pracownika", worker, method: :delete, class: "delete-button" %>
+     <%= link_to "Powrót do pracowników", workers_path %>
+
+  </div>
+<% end %>

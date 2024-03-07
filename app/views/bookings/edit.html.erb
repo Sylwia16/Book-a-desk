@@ -1,0 +1,12 @@
+<!-- app/views/bookings/edit.html.erb -->
+<h1>Edytuj rezerwację</h1>
+
+<%= render "form", booking: @booking %>
+
+<br>
+
+<div>
+  <%= link_to "Pokaż szczegóły", @booking, class: "show-link" %> 
+  <br>
+  <%= link_to "Powrót do rezerwacji", bookings_path %>
+</div>

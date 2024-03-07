@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Biurka</h1>
+
+<div id="desks">
+  <% @desks.each do |desk| %>
+    <%= render desk %>
+    
+  <% end %>
+</div>
+
+<%= link_to "Nowe biurko", new_desk_path %>
+
+

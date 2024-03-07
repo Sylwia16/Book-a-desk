@@ -1,0 +1,24 @@
+<!-- app/views/bookings/show.html.erb -->
+<div id="<%= dom_id @booking %>" class="booking-details">
+  <p>
+    <strong>UserID:</strong>
+    <%= @booking.worker_id %>
+  </p>
+
+  <p>
+    <strong>Desk ID:</strong>
+    <%= @booking.desk_id %>
+  </p>
+
+  <!-- Dodaj inne szczegóły rezerwacji, jeśli są dostępne -->
+</div>
+
+<div class="actions">
+  <%= link_to "Edytuj szczegóły", edit_booking_path(@booking), class: "edit-link" %>
+
+  <% if current_user.email == '4999@admin.com' %>
+    <%= button_to "Usuń tę rezerwację", @booking, method: :delete, class: "delete-button" %>
+  <% end %>
+
+  <%= link_to "Powrót do rezerwacji", bookings_path, class: "back-link" %>
+</div>

@@ -1,0 +1,77 @@
+/* app/assets/stylesheets/application.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.success-message {
+  color: green;
+}
+/* app/assets/stylesheets/application.css */
+.administrators-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.administrator-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  width: 200px;
+  text-align: center;
+}
+/* app/assets/stylesheets/application.css */
+.new-administrator-link {
+  padding: 10px;
+  border-radius: 5px;
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.new-administrator-link:hover {
+  background-color: #2980b9;
+}
+/* app/assets/stylesheets/application.css */
+.administrator-details {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+/* app/assets/stylesheets/application.css */
+.administrator-details {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.actions {
+  margin-top: 20px;
+}
+
+.edit-button, .delete-button {
+  color: white;
+  background-color: #3498db;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.edit-button:hover, .delete-button:hover {
+  background-color: #2980b9;
+}

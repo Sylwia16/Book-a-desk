@@ -1,0 +1,30 @@
+<!-- app/views/workers/_form.html.erb -->
+<%= form_with(model: worker) do |form| %>
+  <% if worker.errors.any? %>
+    <div class="error-message">
+      <h2><%= pluralize(worker.errors.count, "error") %> prohibited this worker from being saved:</h2>
+
+      <ul>
+        <% worker.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :WorkerID, class: "form-label" %>
+    <%= form.text_field :WorkerID, class: "form-input" %>
+  </div>
+
+  <div>
+    <%= form.label :Password, class: "form-label" %>
+    <%= form.text_field :Password, class: "form-input" %>
+  </div>
+
+  <!-- Dodaj inne pola formularza, jeśli są potrzebne -->
+
+  <div>
+    <%= form.submit class: "form-submit" %>
+  </div>
+<% end %>
